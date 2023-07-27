@@ -21,13 +21,13 @@ const Home = () => {
         </div>
         <div className="panel1">
           <button onClick={boysnav}>
-            <img src={p1}/>
+            <img id="p1" src={p1}/>
           </button>
           <h2 className="text"> The Boyz </h2>
         </div>
         <div className="panel2">
           <button onClick={girlsnav}>
-            <img src={p2}/>
+            <img id="p2" src={p2}/>
           </button>
           <h2 className="text"> The Girls </h2>
         </div>

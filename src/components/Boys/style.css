@@ -1,0 +1,11 @@
+.imgContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.disImg1Container,
+.disImg2Container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
