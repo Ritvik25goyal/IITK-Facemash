@@ -20,14 +20,14 @@ const Home = () => {
           <h1>IITK FaceMASH</h1>
         </div>
         <div className="panel1">
-          <button onClick={boysnav}>
-            <img id="p1" src={p1}/>
+          <button className="img-button" onClick={boysnav}>
+            <img className="home-img" src={p1}/>
           </button>
           <h2 className="text"> The Boyz </h2>
         </div>
         <div className="panel2">
-          <button onClick={girlsnav}>
-            <img id="p2" src={p2}/>
+          <button className="img-button" onClick={girlsnav}>
+            <img className="home-img" src={p2}/>
           </button>
           <h2 className="text"> The Girls </h2>
         </div>
