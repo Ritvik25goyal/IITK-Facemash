@@ -10,9 +10,8 @@ for (let i = 220001; i <= 2201238; i++) {
 }
 
 export const Boys = () => {
-  const [photo1, setPhoto1] = useState(null);
-  const [photo2, setPhoto2] = useState(null);
-  const [selectedImageNumber, setSelectedImageNumber] = useState(null);
+  const [photo1, setPhoto1] = useState("");
+  const [photo2, setPhoto2] = useState("");
 
   useEffect(() => {
     selectRandomPhotos();
@@ -40,48 +39,48 @@ export const Boys = () => {
   };
 
   //Function for flip the image if rejected
-  const fliptheimage = async (value) => {
-    let randomNumber1, randomNumber2, photo1Name, photo2Name;
+  const fliptheimage = (value) => {
+    let randomNumber, photoName;
 
     if (value === 1) {
-      do {
-        randomNumber2 = formatToFourDigits(getRandomNumber());
-        photo2Name = `22${randomNumber2}`;
-      } while ((!(await doesPhotoExist(photo2Name)))&&(photo2Name != photo1));
-      setPhoto2(photo2Name);
+      while(1){
+        randomNumber=formatToFourDigits(getRandomNumber());
+        photoName = `22${randomNumber}`;
+        if(photoName!==photo1 && doesPhotoExist(photoName)) break; 
+      }
+
+      setPhoto2(photoName);
     } else if (value === 2) {
-      do {
-        randomNumber1 = formatToFourDigits(getRandomNumber());
-        photo1Name = `22${randomNumber1}`;
-      } while ((!(await doesPhotoExist(photo1Name)))&&(photo1Name != photo2));
-      setPhoto1(photo1Name);
+      while(1){
+        randomNumber=formatToFourDigits(getRandomNumber());
+        photoName = `22${randomNumber}`;
+        if(photoName!==photo2 && doesPhotoExist(photoName)) break; 
+      }
+
+      setPhoto1(photoName);
     }
   };
   // Function to select two random photos
-  const selectRandomPhotos = async () => {
+  const selectRandomPhotos = () => {
     let randomNumber1, randomNumber2, photo1Name, photo2Name;
 
     // Loop until we find two valid photo names
-    do {
+    while(1){
       randomNumber1 = formatToFourDigits(getRandomNumber());
       randomNumber2 = formatToFourDigits(getRandomNumber());
       photo1Name = `22${randomNumber1}`;
       photo2Name = `22${randomNumber2}`;
-    } while (
-      !(await doesPhotoExist(photo1Name)) ||
-      !(await doesPhotoExist(photo2Name))
-    );
+      if(photo1Name!==photo2Name && (doesPhotoExist(photo1Name)) && (doesPhotoExist(photo2Name))){
+        break;
+      }
+    }
 
     setPhoto1(photo1Name);
     setPhoto2(photo2Name);
   };
 
   const handleImageSelection = (imageName) => {
-    setSelectedImageNumber((prevNumber) => prevNumber + 1);
-    // You can use the 'imageName' and 'imageNumberMapping1' to update the mapping accordingly
     imageNumberMapping1[imageName] = imageNumberMapping1[imageName] + 1;
-    console.log(imageName);
-    console.log(imageNumberMapping1);
   };
 
   return (
@@ -95,8 +94,8 @@ export const Boys = () => {
           <button
             className="img-button"
             onClick={() => {
-              fliptheimage(1);
               handleImageSelection(photo1);
+              fliptheimage(1);
             }}
           >
             {/* <img className="home-img" src={p1} /> */}
@@ -113,8 +112,8 @@ export const Boys = () => {
           <button
             className="img-button"
             onClick={() => {
-              fliptheimage(2);
               handleImageSelection(photo2);
+              fliptheimage(2);
             }}
           >
             {/* <img className="home-img" src={p2} /> */}
