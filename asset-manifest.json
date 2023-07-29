@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/IITK-Facemash/static/css/main.57960921.css",
-    "main.js": "/IITK-Facemash/static/js/main.56bdcd21.js",
+    "main.js": "/IITK-Facemash/static/js/main.80fa0914.js",
     "static/js/787.fda8fff0.chunk.js": "/IITK-Facemash/static/js/787.fda8fff0.chunk.js",
     "static/media/pxfuel.jpg": "/IITK-Facemash/static/media/pxfuel.e64b71c744731f512a39.jpg",
     "static/media/sLRfghosNM8_large.jpg": "/IITK-Facemash/static/media/sLRfghosNM8_large.d61a114259778236e9f8.jpg",
@@ -15,11 +15,11 @@
     "static/media/VictorMono-Regular.woff2": "/IITK-Facemash/static/media/VictorMono-Regular.12cb6478d8ad9b3b62fe.woff2",
     "index.html": "/IITK-Facemash/index.html",
     "main.57960921.css.map": "/IITK-Facemash/static/css/main.57960921.css.map",
-    "main.56bdcd21.js.map": "/IITK-Facemash/static/js/main.56bdcd21.js.map",
+    "main.80fa0914.js.map": "/IITK-Facemash/static/js/main.80fa0914.js.map",
     "787.fda8fff0.chunk.js.map": "/IITK-Facemash/static/js/787.fda8fff0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.57960921.css",
-    "static/js/main.56bdcd21.js"
+    "static/js/main.80fa0914.js"
   ]
 }
