@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import { imageNumberMapping1 } from "../Boys/Boys.jsx";
+import jsonData from "../../assets/data.json";
 import "./style.css";
 
 export default function BoyzCelebrity() {
@@ -35,7 +36,7 @@ export default function BoyzCelebrity() {
           <div>
             {top10RollNumbers.map((item, index) => (
               <div key={index}>
-                {index + 1} {item}
+                {index + 1} {item} {jsonData[item].name}
               </div>
             ))}
           </div>

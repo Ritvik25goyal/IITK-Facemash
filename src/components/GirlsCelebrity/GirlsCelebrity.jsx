@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import { imageNumberMapping2 } from "../Girls/Girls.jsx";
+import jsonData from "../../assets/data.json";
 import "./style.css";
 
 export default function GirlsCelebrity() {
@@ -35,7 +36,7 @@ export default function GirlsCelebrity() {
           <div>
             {top10RollNumbers.map((item, index) => (
               <div key={index}>
-                {index + 1} {item}
+                {index + 1} {item} {jsonData[item].name}
               </div>
             ))}
           </div>
