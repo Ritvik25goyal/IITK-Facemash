@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, Routes } from "react-router-dom";
 import Home from './components/Home/Home';
-import Boys from './components/Boys/Boys';
-import Girls from './components/Girls/Girls';
+import {Boys} from './components/Boys/Boys';
+import {Girls} from './components/Girls/Girls';
 import BoyzCelebrity from './components/BoyzCelebrity/BoyzCelebrity';
 import GirlsCelebrity from './components/GirlsCelebrity/GirlsCelebrity';
 

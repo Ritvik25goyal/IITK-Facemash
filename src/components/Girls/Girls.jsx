@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./style.css";
 
-const imageNumberMapping = {};
+export const imageNumberMapping2 = {};
 
-// Initialize the imageNumberMapping object with values from 220001 to 221238, all set to 0
+// Initialize the imageNumberMapping2 object with values from 220001 to 221238, all set to 0
 for (let i = 220001; i <= 2201238; i++) {
-  imageNumberMapping[`${i}`] = 0;
+  imageNumberMapping2[`${i}`] = 0;
 }
 
-const Girls = () => {
+export const Girls = () => {
   const [photo1, setPhoto1] = useState(null);
   const [photo2, setPhoto2] = useState(null);
   const [selectedImageNumber, setSelectedImageNumber] = useState(null);
@@ -78,10 +78,10 @@ const Girls = () => {
 
   const handleImageSelection = (imageName) => {
     setSelectedImageNumber((prevNumber) => prevNumber + 1);
-    // You can use the 'imageName' and 'imageNumberMapping' to update the mapping accordingly
-    imageNumberMapping[imageName] = imageNumberMapping[imageName] + 1;
+    // You can use the 'imageName' and 'imageNumberMapping2' to update the mapping accordingly
+    imageNumberMapping2[imageName] = imageNumberMapping2[imageName] + 1;
     console.log(imageName);
-    console.log(imageNumberMapping);
+    console.log(imageNumberMapping2);
   };
 
   return (
@@ -138,4 +138,3 @@ const Girls = () => {
   );
 };
 
-export default Girls;
