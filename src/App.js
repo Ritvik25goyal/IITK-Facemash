@@ -11,11 +11,11 @@ function App() {
   return (
     <>
     <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/boyz" Component={Boys} />
-        <Route path="/girls" Component={Girls} />
-        <Route path="/boyzcelebrities" Component={BoyzCelebrity} />
-        <Route path="/girlscelebrities" Component={GirlsCelebrity} />
+        <Route exact path="/" Component={Home} />
+        <Route exact path="/boyz" Component={Boys} />
+        <Route exact path="/girls" Component={Girls} />
+        <Route exact path="/boyzcelebrities" Component={BoyzCelebrity} />
+        <Route exact path="/girlscelebrities" Component={GirlsCelebrity} />
     </Routes>
     </>
   );
